@@ -10,21 +10,24 @@ int main()
     scanf("%f", &x);
 
     // x ( -21, 3] U (12, +∞);
-    if ( (x > -21 && x <= 3) || ( x > 12 ) ) {
+    if ((x > -21 && x <= 3) || (x > 12))
+    {
         // first equation
         y = -14 * x - 20;
         printf("Within the range of valid values\nEquasion result: %f \n", y);
     }
 
     // x ( -∞, -41];
-    else if ( x <= -41 ) {
+    else if (x <= -41)
+    {
         // second equation
         y = 13 * x * x / 11 - 6;
         printf("Within the range of valid values\nEquasion result: %f \n", y);
     }
 
     // no matches
-    else {
+    else
+    {
         printf("No value\n");
     }
 

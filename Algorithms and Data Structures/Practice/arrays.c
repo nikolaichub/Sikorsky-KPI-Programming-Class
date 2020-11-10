@@ -1,11 +1,12 @@
 #include <stdio.h>
-#include <math.h>
 
 #define SIZE 10
 
+// basic operations with arrays
+
 int main() {
 
-    // basic operations with arrays
+
 
     int array1[SIZE] = {0};
     int array2[SIZE] = {0};

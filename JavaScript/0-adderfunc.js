@@ -13,7 +13,4 @@ const adder = (initial = 0) => ({
 });
 
 const adderFunction = adder(5).add(5).add(-55);
-/*console.log(adderFunction);
-for(const element in adderFunction){
-    console.log(element);
-}*/
+

@@ -1,13 +1,5 @@
 'use strict';
 
-// Идентификаторы
-
-let name = 'Kolya';
-const birthDay = 2002;
-const printGreet = name => console.log('Hello,',name);
-
-//printGreet(name);
-
 // Циклы
 
 let start = 15, 
@@ -39,18 +31,5 @@ const rangeOdd = (start, end) => {
     return console.log(array);
 };
 
-//range(start, end)
-//rangeOdd(start, end)
-
-// Функции
-
-let a = 2;
-let b = 6;
-
-const avarage = (a, b) => (a + b) / 2;
-const square = a => a*a;
-const cube = a => a*a*a;
-
-console.log(avarage(a,b));
-console.log(square(a));
-console.log(cube(a));
+range(start, end)
+rangeOdd(start, end)

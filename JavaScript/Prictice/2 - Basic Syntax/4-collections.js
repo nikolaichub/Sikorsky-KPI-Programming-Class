@@ -16,27 +16,29 @@ const phoneBook = [
     {
         name: 'John',
         phone: '+380259543874'
-    }    
+    }
 ];
 
 // extended
-function findPhoneByName(name) {
+function findPhoneByNameExtended(name) {
     for (let i = 0; i < phoneBook.length; i++) {
         const objUser = phoneBook[i];
         for (const userName in objUser) {
             if (objUser[userName] == name) {
                 console.log(`${objUser.phone}`);
-                
+
             }
         }
     }
 };
 
 // simplified
-function findPhoneByName2(name) {
-    phoneBook.forEach(element => {
-        element.name == name ? console.log(element.phone) : console.log('no');
+function findPhoneByName(name) {
+    phoneBook.forEach(userObj => {
+        if (userObj.name == name) {
+            console.log(userObj.phone)
+        }
     });
 };
 
-findPhoneByName2('Artem');
+findPhoneByName('Artem');

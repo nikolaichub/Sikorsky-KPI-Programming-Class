@@ -19,7 +19,7 @@ const phoneBookCollection = [
     }
 ];
 
-// extended
+// first variation 'extended'
 function findPhoneByNameExtended(name) {
     for (let i = 0; i < phoneBookCollection.length; i++) {
         const objUser = phoneBookCollection[i];
@@ -32,7 +32,7 @@ function findPhoneByNameExtended(name) {
     }
 };
 
-// simplified
+// second variation 'simplified'
 function findPhoneByName(name) {
     phoneBookCollection.forEach(userObj => {
         if (userObj.name == name) {
@@ -41,4 +41,21 @@ function findPhoneByName(name) {
     });
 };
 
+// second part
+
 findPhoneByName('Dima');
+
+const hash = {
+    'Nikolai': '+380824255367',
+    'Dima'   : '+380924629544',
+    'Artem'  : '+380371651644',
+    'John'   : '+380259543874',
+}
+
+function findPhoneByNameInHash(name) {
+    return hash[name] ? hash[name] : 'no such number'; 
+}
+
+
+console.log(findPhoneByNameInHash('John'));
+console.log(findPhoneByNameInHash('66'));

@@ -1,6 +1,6 @@
 'use strict';
 
-const phoneBook = [
+const phoneBookCollection = [
     {
         name: 'Nikolai',
         phone: '+380824255367'
@@ -21,8 +21,8 @@ const phoneBook = [
 
 // extended
 function findPhoneByNameExtended(name) {
-    for (let i = 0; i < phoneBook.length; i++) {
-        const objUser = phoneBook[i];
+    for (let i = 0; i < phoneBookCollection.length; i++) {
+        const objUser = phoneBookCollection[i];
         for (const userName in objUser) {
             if (objUser[userName] == name) {
                 console.log(`${objUser.phone}`);
@@ -34,11 +34,11 @@ function findPhoneByNameExtended(name) {
 
 // simplified
 function findPhoneByName(name) {
-    phoneBook.forEach(userObj => {
+    phoneBookCollection.forEach(userObj => {
         if (userObj.name == name) {
             console.log(userObj.phone)
         }
     });
 };
 
-findPhoneByName('Artem');
+findPhoneByName('Dima');

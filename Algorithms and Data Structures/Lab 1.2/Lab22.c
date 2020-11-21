@@ -13,16 +13,15 @@ double secondWay(int n) {
 
 
         numerator *= (i + 1) * sin(i);
-        counter += i + 2;
+        counter += 4;
 
         denominator = i * (i + 1);
         counter += 2;
 
         totalSum += numerator / denominator;
-        counter += 1;
+        counter += 2;
     }
     
-    counter += n - 1;
     printf("Number of mathematical operations: %d\n", counter);
     return totalSum;
 }

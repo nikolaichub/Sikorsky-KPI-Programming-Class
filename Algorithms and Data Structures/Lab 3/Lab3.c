@@ -12,14 +12,9 @@
 // setting cursor position
 void gotoXY(int x, int y) {
     COORD coord;
-    coord.X = x;
-    coord.Y = y;
+    coord.X = y;
+    coord.Y = x;
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
-}
-
-void printMatrix(int i_cord, int j_cord) {
-    gotoXY(j_cord, i_cord);
-    printf("#");
 }
 
 int main() {
@@ -33,54 +28,59 @@ int main() {
     int matrix[ROW][COLUMN] = { 0 };
 
     // writes one more line for an odd number of cycles/loops
-    if (m % 2 != 0)
-    {
-        for (j = m / 2; j <= n - 1 - (m / 2); j++)
-        {
+    if (m % 2 != 0) {
+
+        for (j = m / 2; j <= n - 1 - (m / 2); j++) {
+
             i = m / 2;
-            printMatrix(i, j);
+            gotoXY(i, j);
+            printf("%d", matrix[i][j]);
             Sleep(SLEEP_TIME);
         }
     }
 
     // cycles
     // m/2 - number of cycles/loops
-    for (p = m/2; p > 0; p--)
-    {
+    for (p = m / 2; p > 0; p--) {
+
         // left
-        for (j = n-1-p; j >= p-1; j--)
-        {
+        for (j = n - 1 - p; j >= p - 1; j--) {
+
             i = m - p;
-            printMatrix(i, j);
+            gotoXY(i, j);
+            printf("%d", matrix[i][j]);
             Sleep(SLEEP_TIME);
         }
 
         // up
-        for (i = m-p; i >= p-1; i--)
-        {
+        for (i = m - p; i >= p - 1; i--) {
+
             j = p - 1;
-            printMatrix(i, j);
+            gotoXY(i, j);
+            printf("%d", matrix[i][j]);
             Sleep(SLEEP_TIME);
         }
 
         // right
-        for (j = p-1; j <= n-p; j++)
-        {
+        for (j = p - 1; j <= n - p; j++) {
+
             i = p - 1;
-            printMatrix(i, j);
+            gotoXY(i, j);
+            printf("%d", matrix[i][j]);
             Sleep(SLEEP_TIME);
         }
 
         // down
-        for (i = p-1; i < m-p+1; i++)
-        {
+        for (i = p - 1; i < m - p + 1; i++) {
+
             j = n - p;
-            printMatrix(i, j);
+            gotoXY(i, j);
+            printf("%d", matrix[i][j]);
             Sleep(SLEEP_TIME);
         }
     }
 
     // writes a gap
-    gotoXY(0, m);
+    gotoXY(m,0);
     return 0;
 }

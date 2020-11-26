@@ -48,4 +48,15 @@ function sum(...args) {
     return sum;
 }
 
+// via do..while
+function sum(...args) {
+    let sum = 0;
+    let i = 0;
+    do {
+        sum += args[i];
+        i++;
+    } while (i < args.length);
+    return sum;
+}
+
 console.log(a);

@@ -23,4 +23,15 @@ function max(mtrx) {
     return maxValue;
 }
 
+// via forEach
+function max(mtrx) {
+    let maxValue = 0;
+    mtrx.forEach(i => {
+        i.forEach(j => {
+            j >= maxValue ? maxValue = j : null;
+        });   
+    });
+    return maxValue;
+}
+
 console.log(m);

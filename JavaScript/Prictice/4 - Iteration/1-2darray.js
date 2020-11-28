@@ -1,6 +1,6 @@
 'use strict';
 
-const matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+const matrix = [[1, 2, 3], [4, 5, 6], [70, 8, 9]];
 const m = max(matrix);
 
 // standart method
@@ -13,6 +13,13 @@ function max(mtrx) {
             }
         }
     }
+    return maxValue;
+}
+
+// via map
+function max(mtrx) {
+    let maxValue = 0;
+    mtrx.map(i => i.map(j => j >= maxValue ? maxValue = j : null));
     return maxValue;
 }
 

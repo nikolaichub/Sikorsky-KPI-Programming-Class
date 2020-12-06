@@ -33,16 +33,11 @@ int search_element(int x, int a[]){
 
 int main(){
 
-    int arr[N];
+    int arr[N] = {0, 1, 1, 1, 5, 5, 7, 8, 9, 10,11};
     int x = 11;
 
-    for (int i = 0; i < N; i++){
-        arr[i] = i+1;
-    }
     print_array(arr);
-
     search_element(x, arr);
-    
 
     return 0;
 }

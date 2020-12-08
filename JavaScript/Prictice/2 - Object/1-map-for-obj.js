@@ -17,16 +17,13 @@ const person = {
     }
 };
 
-Object.prototype.map = function (fn) {
+const omap = (mapFn, obj) => {
     const newObj = {};
-
-    // получает только ключи Object
-    const objKeys = Object.keys(this);
-    objKeys.forEach(el => {
-        newObj[el] = fn(this[el]);
-    });
+    for (const key of Object.keys(obj)) {
+        newObj[key] = mapFn(obj[key]);
+    }
 
     return newObj;
 };
 
-console.log(person.map(x => x));
+console.log(omap(x => x, person));

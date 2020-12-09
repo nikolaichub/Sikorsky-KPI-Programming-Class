@@ -17,13 +17,13 @@ const person = {
     }
 };
 
-const omap = (mapFn, obj) => {
-    const newObj = {};
-    for (const key of Object.keys(obj)) {
-        newObj[key] = mapFn(obj[key]);
+const omap = (src, mapFn) => {
+    const dest = {};
+    for (const key of Object.keys(src)) {
+        dest[key] = mapFn(src[key]);
     }
 
-    return newObj;
+    return dest;
 };
 
-console.log(omap(x => x, person));
+console.log(omap(person, x => x));

@@ -1,7 +1,6 @@
 'use strict';
 
 const EventEmmiter = function() {
-    //console.log('> process emmited');
     this.events = {};
 };
 

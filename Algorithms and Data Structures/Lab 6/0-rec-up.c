@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <math.h>
 
 double c_ln(double x, double i, double* sum) {
     double k = 0;
@@ -14,16 +13,31 @@ double c_ln(double x, double i, double* sum) {
 }
 
 int main() {
-    double real, x, i, sum = 0;
+    double x, i, sum = 0;
     printf("x = ");
     scanf_s("%lf", &x);
     printf("i = ");
     scanf_s("%lf", &i);
 
-    real = log(x);
     c_ln(x, i, &sum);
-    printf("Calculated value of ln(%lf) = %lf\n", x, sum);
-    printf("Real value of ln(%.1lf) = %lf", x, real);
+    printf("Calculated value of ln(%lf) = %lf\n\n", x, sum);
+
+    printf("Test: \n");
+    double tempSum = 0, start;
+    for (int j = 1; j <= i; ++j)
+    {
+        if (j == 1)
+        {
+            start = (x - 1) / x;
+            tempSum += start;
+        }
+        else {
+            start = start * ((j - 1) * (x - 1) / (j * x));
+            tempSum += start;
+        }
+        printf("value = %lf sum = %lf \n", start, tempSum);
+    }
+    printf_s("Sum of range equal: ( %f )\n", sum);
 
     return 0;
 }

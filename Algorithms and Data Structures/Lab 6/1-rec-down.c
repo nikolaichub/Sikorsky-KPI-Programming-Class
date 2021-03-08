@@ -21,8 +21,7 @@ int main() {
     printf("i = ");
     scanf_s("%lf", &i);
 
-    // double res = c_ln(start, i, tempI, sum);
-    printf("Calculated value of ln(%lf) = %lf\n\n\n", x, c_ln(start, i, tempI, sum));
+    printf("Calculated value of ln(%lf) = %lf\n\n", x, c_ln(start, i, tempI, sum));
     printf("Test: \n");
     for (int j = 1; j <= i; ++j)
     {
@@ -37,7 +36,7 @@ int main() {
         }
         printf("value = %lf sum = %lf \n", start, sum);
     }
-    printf_s("Sum of range equal: ( %f )\n", sum);
+    printf_s("Tested value: %lf\n", sum);
 
     return 0;
 }

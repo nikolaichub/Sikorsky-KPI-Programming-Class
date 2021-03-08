@@ -37,7 +37,7 @@ int main() {
         }
         printf("value = %lf sum = %lf \n", start, tempSum);
     }
-    printf_s("Sum of range equal: ( %f )\n", sum);
+    printf_s("Tested value: %f\n", sum);
 
     return 0;
 }
